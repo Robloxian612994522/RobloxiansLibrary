@@ -2,20 +2,19 @@
 
 local Player = game.Players.LocalPlayer
 local CoreGui = game:GetService("CoreGui")
-
-local Library = {}
+_G.Library = {}
 -- Functions 
-function Library:Notify()
-    local Notify = Instance.new("ScreenGui")
+function Library.Notify(Text)
+local NotifyGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 
 --Properties:
 
-Notify.Name = "Notify"
-Notify.Parent = CoreGui
-Notify.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+NotifyGui.Name = "Notify"
+NotifyGui.Parent = CoreGui
+NotifyGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = Notify
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -37,7 +36,9 @@ TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
-TextLabel.Text = "Test"
+TextLabel.Text = Text
+wait(4)
+NotifyGui:Destroy()
 end
 
-return Library
+return _G.Library
