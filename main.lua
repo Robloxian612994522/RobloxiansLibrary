@@ -4,7 +4,7 @@ local Player = game.Players.LocalPlayer
 local CoreGui = game:GetService("CoreGui")
 _G.Library = {}
 -- Functions 
-function Library.Notify(Text)
+function Library:Notify(Text)
 local NotifyGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
