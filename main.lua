@@ -4,7 +4,7 @@ local Player = game.Players.LocalPlayer
 local CoreGui = game:GetService("CoreGui")
 _G.Library = {}
 -- Functions 
-function _G.Library:Notify(Text)
+function Library:Notify(Text)
 local NotifyGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -16,7 +16,7 @@ NotifyGui.Name = "Notify"
 NotifyGui.Parent = CoreGui
 NotifyGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = Notify
+Frame.Parent = NotifyGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
